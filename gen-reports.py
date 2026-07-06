@@ -9,7 +9,7 @@ def get_names(filename):
         l = map(str.strip, file.readlines());
         return list(l)
 
-max_reports = 10
+max_reports = 3
 
 def nreports(remain):
     return random.randint(0, min(max_reports, remain))
@@ -22,7 +22,6 @@ def make_org(names):
     for me in range(nnames):
         n = nreports(nnames - them)
         reports = names[them:them+n]
-#        print(f"me {me} n {n} name {names[me]}, reports {reports}")
         them = them + n
         org[names[me]] = reports
     return org

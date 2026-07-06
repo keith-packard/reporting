@@ -2,6 +2,8 @@
 
 import random
 
+random.seed(0)
+
 def get_names(filename):
     with open(filename, 'r') as file:
         l = map(str.strip, file.readlines());
